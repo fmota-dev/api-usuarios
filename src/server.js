@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import userRoutes from './routes/userRoutes.js';
 import docsRoutes from './routes/docsRoutes.js';
+import path from 'path';
 
 const app = express();
 
@@ -13,7 +14,7 @@ app.use(express.static('public/docs'))
 // Configurando as rotas
 
 app.get('/', (req, res) => {
-	res.sendFile('index.html', { root: 'public/docs' });
+	res.sendFile(path.join(__dirname, 'public/docs', 'index.html'));
 });
 
 app.use(userRoutes);
