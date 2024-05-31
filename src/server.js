@@ -8,6 +8,11 @@ app.use(express.json());
 app.use(cors());
 
 // Configurando as rotas
+
+app.get('/', (req, res) => {
+	res.send('API de usuários');
+});
+
 app.use('/usuarios', userRoutes);
 
 const PORT = process.env.PORT || 3000;
