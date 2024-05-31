@@ -1,8 +1,10 @@
 const Users = {
-	id: 'aaaaaaaa-bbbbbbbbb-cccccccc-ddddddddd',
-	name: 'Teste',
-	age: 21,
-	email: 'teste@gmail.com',
+	type: 'object',
+	properties: {
+		name: { type: 'string' },
+		email: { type: 'string' },
+		age: { type: 'integer' },
+	},
 };
 
 export default Users;
