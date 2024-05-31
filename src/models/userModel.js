@@ -2,7 +2,7 @@
 import prisma from '../config/prisma.js';
 
 class UserModel {
-	static async createUser(data) {
+	async createUser(data) {
 		return prisma.user.create({
 			data: {
 				name: data.name,
@@ -12,11 +12,11 @@ class UserModel {
 		});
 	}
 
-	static async getUsers() {
+	async getUsers() {
 		return prisma.user.findMany();
 	}
 
-	static async getUserById(id) {
+	async getUserById(id) {
 		return prisma.user.findUnique({
 			where: {
 				id: id,
@@ -24,7 +24,7 @@ class UserModel {
 		});
 	}
 
-	static async updateUser(id, data) {
+	async updateUser(id, data) {
 		return prisma.user.update({
 			where: {
 				id: id,
@@ -37,7 +37,7 @@ class UserModel {
 		});
 	}
 
-	static async deleteUser(id) {
+	async deleteUser(id) {
 		return prisma.user.delete({
 			where: {
 				id: id,
