@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// Configurando as rotas
+
 
 app.get('/', (req, res) => {
 	res.send('API de usuários');
