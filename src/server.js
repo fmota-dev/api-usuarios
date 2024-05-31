@@ -20,7 +20,7 @@ app.use(express.static('public/docs'));
 // Configurando as rotas
 
 app.get('/', (req, res) => {
-	res.sendFile(path.join(__dirname, 'public/index.html'));
+	res.sendFile(path.join(__dirname, 'public/docs/index.html'));
 });
 
 app.use(userRoutes);
