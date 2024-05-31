@@ -6,7 +6,7 @@ let doc = {
 		title: 'Usuarios API',
 		description: 'Documentação da API de usuários',
 	},
-	host: 'https://api-usuarios-seven.vercel.app',
+	host: 'api-usuarios-seven.vercel.app',
 	schemes: ['http', 'https'],
 	consumes: ['application/json'],
 	produces: ['application/json'],
