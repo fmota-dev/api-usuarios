@@ -52,7 +52,9 @@ class UserModel {
 	async deleteUser(id) {
 		try {
 			return await prisma.user.delete({
-				where: { id: Number(id) },
+				where: {
+					id: id,
+				},
 			});
 		} catch (error) {
 			console.error('Erro ao deletar usuário no Prisma:', error);
