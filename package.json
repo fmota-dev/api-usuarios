@@ -8,7 +8,8 @@
 		"start": "node ./src/server.js",
 		"dev": "nodemon ./src/server.js",
 		"vercel-build": "npx prisma generate",
-		"doc": "node src/swagger.js"
+		"doc": "node src/swagger.js",
+		"postgenerate-docs": "ren ./docs/ ./docs/index.html"
 	},
 	"keywords": [],
 	"author": "",
