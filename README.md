@@ -4,7 +4,7 @@ Este projeto é uma API para gerenciamento de usuários.
 
 ## Documentação
 
-A documentação completa da API está disponível em [https://api-usuarios-seven.vercel.app/usuarios](https://api-usuarios-seven.vercel.app/usuarios).
+A documentação completa da API está disponível em [https://api-usuarios-seven.vercel.app/docs](https://api-usuarios-seven.vercel.app/docs).
 
 ## Recursos
 
