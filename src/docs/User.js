@@ -1,4 +1,4 @@
-const Users = {
+const User = {
 	type: 'object',
 	properties: {
 		name: { type: 'string' },
@@ -7,4 +7,4 @@ const Users = {
 	},
 };
 
-export default Users;
+export default User;

@@ -178,7 +178,7 @@
     }
   },
   "definitions": {
-    "Users": {
+    "User": {
       "type": "object",
       "properties": {
         "type": {

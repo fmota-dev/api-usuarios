@@ -1,4 +1,4 @@
-import Users from '../docs/Users.js';
+import User from '../docs/User.js';
 
 let doc = {
 	info: {
@@ -19,7 +19,7 @@ let doc = {
 		},
 	},
 	definitions: {
-		Users,
+		User,
 	},
 };
 
