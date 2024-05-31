@@ -5,10 +5,9 @@
     "title": "Usuarios API",
     "description": "Documentação da API de usuários"
   },
-  "host": "https://api-usuarios-seven.vercel.app",
+  "host": "api-usuarios-seven.vercel.app",
   "basePath": "/",
   "schemes": [
-    "http",
     "https"
   ],
   "securityDefinitions": {
