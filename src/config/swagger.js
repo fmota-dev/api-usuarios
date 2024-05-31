@@ -1,25 +1,37 @@
 import User from '../docs/User.js';
 
 let doc = {
+	openapi: '3.0.0',
 	info: {
 		version: '1.0.0',
-		title: 'Usuarios API',
+		title: 'Usuários API',
 		description: 'Documentação da API de usuários',
 	},
-	host: 'api-usuarios-seven.vercel.app',
-	schemes: ['https'],
-	consumes: ['application/json'],
-	produces: ['application/json'],
-	securityDefinitions: {
-		JWT: {
-			description: 'JWT token',
-			type: 'apiKey',
-			in: 'header',
-			name: 'Authorization',
+
+	servers: [
+		{
+			url: 'https://api-usuarios-seven.vercel.app',
+			description: 'Servidor principal',
 		},
-	},
-	definitions: {
-		User,
+	],
+	tags: [
+		{
+			name: 'Usuários',
+			description: 'Operações relacionadas aos usuários',
+		},
+	],
+	components: {
+		securitySchemes: {
+			JWT: {
+				type: 'apiKey',
+				in: 'header',
+				name: 'Authorization',
+				description: 'JWT token',
+			},
+		},
+		schemas: {
+			Usuario: User.Usuario,
+		},
 	},
 };
 

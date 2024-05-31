@@ -1,10 +1,12 @@
-const User = {
-	type: 'object',
-	properties: {
-		name: { type: 'string' },
-		email: { type: 'string' },
-		age: { type: 'integer' },
+const Users = {
+	Usuario: {
+		type: 'object',
+		properties: {
+			name: { type: 'string', example: 'John Doe' },
+			email: { type: 'string', example: 'john.doe@example.com' },
+			age: { type: 'integer', example: 30 },
+		},
 	},
 };
 
-export default User;
+export default Users;
