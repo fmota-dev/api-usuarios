@@ -27,7 +27,10 @@
   "paths": {
     "/usuarios": {
       "post": {
-        "description": "",
+        "tags": [
+          "Usuários"
+        ],
+        "description": "Endpoint para criar um usuário.",
         "parameters": [
           {
             "name": "body",
@@ -61,10 +64,16 @@
         }
       },
       "get": {
-        "description": "",
+        "tags": [
+          "Usuários"
+        ],
+        "description": "Endpoint para buscar todos os usuários.",
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
           },
           "500": {
             "description": "Internal Server Error"
@@ -74,18 +83,25 @@
     },
     "/usuarios/{id}": {
       "get": {
-        "description": "",
+        "tags": [
+          "Usuários"
+        ],
+        "description": "Endpoint para buscar um usuário pelo ID.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "description": "ID do usuário."
           }
         ],
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
           },
           "404": {
             "description": "Not Found"
@@ -96,13 +112,17 @@
         }
       },
       "patch": {
-        "description": "",
+        "tags": [
+          "Usuários"
+        ],
+        "description": "Endpoint para atualizar um usuário pelo ID.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "description": "ID do usuário."
           },
           {
             "name": "body",
@@ -136,13 +156,17 @@
         }
       },
       "delete": {
-        "description": "",
+        "tags": [
+          "Usuários"
+        ],
+        "description": "Endpoint para deletar um usuário pelo ID.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "description": "ID do usuário."
           },
           {
             "name": "body",
