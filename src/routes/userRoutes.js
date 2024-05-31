@@ -20,7 +20,7 @@ const router = express.Router();
    }
    #swagger.responses[201] = {
        description: 'Usuário criado com sucesso.',
-       schema: { $ref: '#/definitions/User' }
+       schema: { $ref: '#/definitions/Users' }
    }
    #swagger.responses[500] = {
        schema: { error: 'Erro ao criar usuário' }
@@ -32,7 +32,7 @@ router.post('/usuarios', validateCreateUser, userController.createUser);
    #swagger.description = 'Endpoint para buscar todos os usuários.'
    #swagger.responses[200] = {
        description: 'Lista de usuários.',
-       schema: { $ref: '#/definitions/User' }
+       schema: { $ref: '#/definitions/Users' }
    }
    #swagger.responses[500] = {
        schema: { error: 'Erro ao buscar usuários' }
@@ -48,7 +48,7 @@ router.get('/usuarios', userController.getUsers);
    }
    #swagger.responses[200] = {
        description: 'Usuário encontrado.',
-       schema: { $ref: '#/definitions/User' }
+       schema: { $ref: '#/definitions/Users' }
    }
    #swagger.responses[404] = {
        schema: { message: 'Usuário não encontrado' }
@@ -70,7 +70,7 @@ router.get('/usuarios/:id', userController.getUserById);
        description: 'Informações do usuário.',
        required: true,
        type: 'object',
-       schema: { $ref: '#/definitions/User' }
+       schema: { $ref: '#/definitions/Users' }
    }
    #swagger.responses[200] = {
        description: 'Usuário atualizado com sucesso.',
@@ -90,7 +90,7 @@ router.patch('/usuarios/:id', validateUpdateUser, userController.updateUser);
    }
    #swagger.responses[200] = {
        description: 'Usuário deletado com sucesso.',
-       schema: { $ref: '#/definitions/User' }
+       schema: { $ref: '#/definitions/Users' }
    }
    #swagger.responses[500] = {
        schema: { error: 'Erro ao deletar usuário' }
