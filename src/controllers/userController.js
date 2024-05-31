@@ -1,6 +1,7 @@
 // src/controllers/userController.js
 import UserModel from '../models/userModel.js';
 
+
 class UserController {
 	createUser = async (req, res) => {
 		try {

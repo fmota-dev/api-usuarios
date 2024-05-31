@@ -1,13 +1,14 @@
 // src/routes/userRoutes.js
 import express from 'express';
 import userController from '../controllers/userController.js';
+import { validateCreateUser, validateUpdateUser } from '../middlewares/userMiddleware.js';
 
 const router = express.Router();
 
-router.post('/', userController.createUser);
-router.get('/', userController.getUsers);
-router.get('/:id', userController.getUserById);
-router.patch('/:id', userController.updateUser);
-router.delete('/:id', userController.deleteUser);
+router.post('/', validateCreateUser, userController.createUser);
+router.get('/', validateUpdateUser, userController.getUsers);
+router.get('/:id', validateUpdateUser, userController.getUserById);
+router.patch('/:id', validateUpdateUser, userController.updateUser);
+router.delete('/:id', validateUpdateUser, userController.deleteUser);
 
 export default router;
