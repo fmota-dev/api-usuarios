@@ -13,7 +13,7 @@ app.use(express.static('public/docs'))
 // Configurando as rotas
 
 app.get('/', (req, res) => {
-	res.send('API de usuários');
+	res.sendFile('index.html', { root: 'public/docs' });
 });
 
 app.use(userRoutes);
