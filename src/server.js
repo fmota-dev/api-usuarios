@@ -8,14 +8,8 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-
-
-app.get('/', (req, res) => {
-	res.send('API de usuários');
-});
-
 app.use(userRoutes);
-app.use('/docs', docsRoutes);
+app.use('/', docsRoutes);
 
 const PORT = process.env.PORT || 3000;
 
