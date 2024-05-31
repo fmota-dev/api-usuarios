@@ -43,13 +43,13 @@
                 "type": "object",
                 "properties": {
                   "name": {
-                    "example": "any"
+                    "example": "John Doe"
                   },
                   "email": {
-                    "example": "any"
+                    "example": "john.doe@example.com"
                   },
                   "age": {
-                    "example": "any"
+                    "example": 30
                   }
                 }
               }
