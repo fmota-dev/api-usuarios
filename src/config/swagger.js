@@ -1,4 +1,4 @@
-import Users from '../../public/docs/Users.js';
+import Users from '../docs/Users.js';
 
 let doc = {
 	info: {
