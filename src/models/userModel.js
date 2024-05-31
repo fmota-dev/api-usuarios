@@ -29,7 +29,7 @@ class UserModel {
 	async getUserById(id) {
 		try {
 			return await prisma.user.findUnique({
-				where: { id: Number(id) },
+				where: { id: id },
 			});
 		} catch (error) {
 			console.error('Erro ao buscar usuário por ID no Prisma:', error);
@@ -40,7 +40,7 @@ class UserModel {
 	async updateUser(id, data) {
 		try {
 			return await prisma.user.update({
-				where: { id: Number(id) },
+				where: { id: id },
 				data: data,
 			});
 		} catch (error) {
