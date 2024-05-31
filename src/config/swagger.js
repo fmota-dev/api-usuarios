@@ -7,7 +7,7 @@ let doc = {
 		description: 'Documentação da API de usuários',
 	},
 	host: 'api-usuarios-seven.vercel.app',
-	schemes: ['http', 'https'],
+	schemes: ['https'],
 	consumes: ['application/json'],
 	produces: ['application/json'],
 	securityDefinitions: {
