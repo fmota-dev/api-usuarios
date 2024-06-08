@@ -20,9 +20,7 @@
   "paths": {
     "/usuarios": {
       "post": {
-        "tags": [
-          "Usuários"
-        ],
+        "tags": ["Usuários"],
         "summary": "Criar usuário",
         "description": "Endpoint para criar um usuário",
         "responses": {
@@ -35,32 +33,10 @@
           "500": {
             "description": "Internal Server Error"
           }
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "name": {
-                    "example": "John Doe"
-                  },
-                  "email": {
-                    "example": "john.doe@example.com"
-                  },
-                  "age": {
-                    "example": 30
-                  }
-                }
-              }
-            }
-          }
         }
       },
       "get": {
-        "tags": [
-          "Usuários"
-        ],
+        "tags": ["Usuários"],
         "summary": "Obter usuários",
         "description": "Endpoint para obter todos os usuários",
         "responses": {
@@ -75,9 +51,7 @@
     },
     "/usuarios/{id}": {
       "get": {
-        "tags": [
-          "Usuários"
-        ],
+        "tags": ["Usuários"],
         "summary": "Obter usuário pelo ID",
         "description": "Endpoint para obter um usuário pelo ID",
         "parameters": [
@@ -103,9 +77,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "Usuários"
-        ],
+        "tags": ["Usuários"],
         "summary": "Atualizar usuário pelo ID",
         "description": "Endpoint para atualizar um usuário pelo ID",
         "parameters": [
@@ -128,32 +100,10 @@
           "500": {
             "description": "Internal Server Error"
           }
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "name": {
-                    "example": "any"
-                  },
-                  "email": {
-                    "example": "any"
-                  },
-                  "age": {
-                    "example": "any"
-                  }
-                }
-              }
-            }
-          }
         }
       },
       "delete": {
-        "tags": [
-          "Usuários"
-        ],
+        "tags": ["Usuários"],
         "summary": "Deletar usuário pelo ID",
         "description": "Endpoint para deletar um usuário pelo ID",
         "parameters": [
@@ -167,34 +117,11 @@
           }
         ],
         "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "400": {
-            "description": "Bad Request"
+          "200": {
+            "description": "Usuário deletado com sucesso"
           },
           "500": {
-            "description": "Internal Server Error"
-          }
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "name": {
-                    "example": "any"
-                  },
-                  "email": {
-                    "example": "any"
-                  },
-                  "age": {
-                    "example": "any"
-                  }
-                }
-              }
-            }
+            "description": "Erro no servidor"
           }
         }
       }

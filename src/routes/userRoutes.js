@@ -1,9 +1,9 @@
-import express from 'express';
-import userController from '../controllers/userController.js';
+import express from "express";
+import userController from "../controllers/userController.js";
 import {
-	validateCreateUser,
-	validateUpdateUser,
-} from '../middlewares/userMiddleware.js';
+  validateCreateUser,
+  validateUpdateUser,
+} from "../middlewares/userMiddleware.js";
 
 const router = express.Router();
 
@@ -44,10 +44,13 @@ const router = express.Router();
  *                 error:
  *                   type: string
  */
-router.post('/usuarios', validateCreateUser, userController.createUser
-	// #swagger.tags = ['Usuários']
-	// #swagger.description = 'Endpoint para criar um usuário'
-	// #swagger.summary = 'Criar usuário'
+router.post(
+  "/usuarios",
+  validateCreateUser,
+  userController.createUser
+  // #swagger.tags = ['Usuários']
+  // #swagger.description = 'Endpoint para criar um usuário'
+  // #swagger.summary = 'Criar usuário'
 );
 
 /**
@@ -77,10 +80,12 @@ router.post('/usuarios', validateCreateUser, userController.createUser
  *                 error:
  *                   type: string
  */
-router.get('/usuarios', userController.getUsers
-	// #swagger.tags = ['Usuários']
-	// #swagger.description = 'Endpoint para obter todos os usuários'
-	// #swagger.summary = 'Obter usuários'
+router.get(
+  "/usuarios",
+  userController.getUsers
+  // #swagger.tags = ['Usuários']
+  // #swagger.description = 'Endpoint para obter todos os usuários'
+  // #swagger.summary = 'Obter usuários'
 );
 
 /**
@@ -124,10 +129,12 @@ router.get('/usuarios', userController.getUsers
  *                 error:
  *                   type: string
  */
-router.get('/usuarios/:id', userController.getUserById
-	// #swagger.tags = ['Usuários']
-	// #swagger.description = 'Endpoint para obter um usuário pelo ID'
-	// #swagger.summary = 'Obter usuário pelo ID'
+router.get(
+  "/usuarios/:id",
+  userController.getUserById
+  // #swagger.tags = ['Usuários']
+  // #swagger.description = 'Endpoint para obter um usuário pelo ID'
+  // #swagger.summary = 'Obter usuário pelo ID'
 );
 
 /**
@@ -177,10 +184,13 @@ router.get('/usuarios/:id', userController.getUserById
  *                 error:
  *                   type: string
  */
-router.patch('/usuarios/:id', validateUpdateUser, userController.updateUser
-	// #swagger.tags = ['Usuários']
-	// #swagger.description = 'Endpoint para atualizar um usuário pelo ID'
-	// #swagger.summary = 'Atualizar usuário pelo ID'
+router.patch(
+  "/usuarios/:id",
+  validateUpdateUser,
+  userController.updateUser
+  // #swagger.tags = ['Usuários']
+  // #swagger.description = 'Endpoint para atualizar um usuário pelo ID'
+  // #swagger.summary = 'Atualizar usuário pelo ID'
 );
 
 /**
@@ -192,12 +202,7 @@ router.patch('/usuarios/:id', validateUpdateUser, userController.updateUser
  *     summary: Endpoint para deletar um usuário pelo ID
  *     description: Deleta um usuário com base no ID fornecido
  *     parameters:
- *       - in: path
- *         name: id
- *         required: true
- *         description: ID do usuário
- *         schema:
- *           type: string
+ *    - id: id
  *     responses:
  *       200:
  *         description: Usuário deletado com sucesso
@@ -215,10 +220,12 @@ router.patch('/usuarios/:id', validateUpdateUser, userController.updateUser
  *                 error:
  *                   type: string
  */
-router.delete('/usuarios/:id', validateUpdateUser, userController.deleteUser
-	// #swagger.tags = ['Usuários']
-	// #swagger.description = 'Endpoint para deletar um usuário pelo ID'
-	// #swagger.summary = 'Deletar usuário pelo ID'
+router.delete(
+  "/usuarios/:id",
+  userController.deleteUser
+  // #swagger.tags = ['Usuários']
+  // #swagger.description = 'Endpoint para deletar um usuário pelo ID'
+  // #swagger.summary = 'Deletar usuário pelo ID'
 );
 
 export default router;
