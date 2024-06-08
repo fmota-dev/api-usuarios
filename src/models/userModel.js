@@ -7,7 +7,7 @@ class UserModel {
 			return await prisma.user.create({
 				data: {
 					name: data.name,
-					age: data.age,
+					age: Number(data.age),
 					email: data.email,
 				},
 			});
